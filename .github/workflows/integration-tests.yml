@@ -64,3 +64,4 @@ jobs:
           SPRING_DATASOURCE_PASSWORD: ${{ secrets.GIT_POSTGRES_PASSWORD }}
           SERVER_PORT: 8080
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
+
