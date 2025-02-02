@@ -1,7 +1,7 @@
 package com.app.job_tracker.filter;
 
 
-import com.app.job_tracker.security.JWTUtil;
+import com.app.job_tracker.utils.JWTUtil;
 import com.app.job_tracker.security.MyUserDetailService;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import jakarta.servlet.FilterChain;

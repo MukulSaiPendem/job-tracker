@@ -6,7 +6,7 @@ import com.app.job_tracker.exception.UserAlreadyExistsException;
 import com.app.job_tracker.dto.LoginCreds;
 import com.app.job_tracker.dto.UserDto;
 import com.app.job_tracker.repository.UserRepo;
-import com.app.job_tracker.security.JWTUtil;
+import com.app.job_tracker.utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
