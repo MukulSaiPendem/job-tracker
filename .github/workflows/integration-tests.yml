@@ -18,7 +18,7 @@ jobs:
         ports:
           - 5432:5432
         options: >-
-          --health-cmd "pg_isready -U ${{ secrets.GIT_POSTGRES_USER }} -d postgres"
+          --health-cmd "pg_isready -U postgres -d postgres"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
@@ -33,13 +33,7 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: 'maven'
-
-      - name: Create PostgreSQL Database
-        run: |
-          PGPASSWORD="postgres" psql -h localhost -U postgres -d postgres -c "CREATE DATABASE postgres;"
-        env:
-          PGPASSWORD: postgres
-
+          
       - name: Create `.env` File
         run: |
           echo "PSQLDB_URL=jdbc:postgresql://localhost:5432/postgres" >> .env
