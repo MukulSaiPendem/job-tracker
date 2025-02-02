@@ -41,6 +41,10 @@ jobs:
           echo "PSQLDB_PASSWORD=postgres" >> .env
           echo "SERVER_PORT=8080" >> .env
           echo "JWT_SECRET=qwerty" >> .env
+          echo "AWS_ACCESSKEY_ID=XXXXXXXX" >> .env
+          echo "AWS_SECRETACCESSKEY=XXXXXXX" >> .env
+          echo "AWS_REGION=xxxxxx" >> .env
+          echo "AWS_BUCKET_NAME=xxxxxx" >> .env
 
       - name: Load Environment Variables
         run: |
